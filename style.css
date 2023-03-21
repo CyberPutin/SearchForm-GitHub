@@ -1,0 +1,263 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assests/font/OpenSans-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assests/font/OpenSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assests/font/OpenSans-Semibold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assests/font/OpenSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assests/font/OpenSans-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+  
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "OpenSans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: #c9d1d9;
+  cursor: default;
+}
+
+:focus, :active, a:focus, a:active {
+  outline: none;
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  max-width: 1240px;
+  margin: 0 auto;
+  background-color: #161b22;
+  color: #dddddd;
+}
+ 
+body::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+body::-webkit-scrollbar-thumb {
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 7px;
+  background-clip: padding-box;
+  background-color: #404548;
+}
+   
+button {
+  cursor: pointer;
+}
+  
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+  
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+  
+ul li {
+  list-style: none;
+}
+  
+img {
+  vertical-align: top;
+}
+
+.container {
+  margin-top: 30px;
+}
+  
+.github-title {
+  text-align: center;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.search-group {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.logo {
+  padding: 8px;
+  margin-right: 12px;
+}
+.search-field {
+  padding: 8px;
+  margin-right: 20px;
+  width: 500px;
+  outline: none;
+  background-color:#0d1117;
+  border: 1px solid #505252;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #a8a8b3;
+  cursor: text;
+  transition: all 0.5s;
+}
+.search-field:hover {
+  border: 1px solid #242e3b;
+}
+.search-field:focus {
+  outline: none;
+  border: 1px solid #1b5ce9;
+}
+.search-group_repo {
+  position: relative;
+}
+.search-field_txt_err {
+  border: #ffffff 1px solid;
+}
+.search_btn {
+  background-color: #1b5ce9;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 30px;
+  color: #a8a8b3;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.search_btn:hover {
+  background-color: #103991;
+}
+.search-field_err {
+  position: absolute;
+  visibility: hidden;
+  bottom: -15px;
+  max-height: 20px;
+  left: 0px;
+}
+.search-field_err_attention {
+  color: #ffffff;
+  font-size: 12px;
+}
+.search-field_err_visible {
+  visibility: visible;
+}
+  
+.repositories {
+  margin: 50px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 90%;
+  gap: 20px;
+  font-size: 16px;
+  background-color: rgba(126, 126, 126, 0.0549019608);
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  padding: 20px 20px;
+  padding-top: 40px;
+  line-height: 18px;
+  
+}
+@media (max-width: 960px) {
+  .repositories {
+    gap: 15px;
+    width: 100%
+  }
+}
+@media (max-width: 650px) {
+  .repositories {
+    gap: 10px;
+    width: 100%;
+  }
+}
+.repo-card {
+  align-items: start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  gap: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  width: 100%;
+  background-color: rgba(126, 126, 126, 0.0549019608);
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  transition: all 0.5s;
+  padding-top: 40px;
+  line-height: 18px;
+}
+.repo-card:hover {
+  transform: scale(1.02);
+}
+.repo-card_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.repo-card_title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  word-break: break-all;
+}
+.repo-card_info {
+  margin-left: 0px;
+}
+.repo-card_info_grp {
+  margin: 10px 0;
+}
+.repo-card_info_link {
+  text-decoration: none;
+  cursor: pointer;
+}
+.repo-card_info_link:hover {
+  text-decoration: underline;
+}
+.repo-card_ava {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #010d0f;
+}
+  
+/*.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f1f3;
+  opacity: 0.5;
+  }*/
+  /*# sourceMappingURL=style.css.map */ 
